@@ -1,0 +1,35 @@
+
+<ion-grid>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Crear producto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+	<ion-row justify-content-center>
+		<ion-col align-self-center size-md="3" size-lg="2" size-xs="10">
+			<div text-center>
+				<h4>Ingrese el medicamento</h4>
+			</div>
+			<div padding>
+
+        <ion-item lines="full">
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input type="text" required [(ngModel)]="producto.nombre"></ion-input>
+        </ion-item>
+
+        
+				<ion-item>
+          <ion-label position="floating">Precio</ion-label>
+					<ion-input type="text" required [(ngModel)]="producto.precio"></ion-input>
+				</ion-item>
+
+				
+			</div>
+
+			<div padding>
+				<ion-button size="large"  type="submit" expand="block"  (click)="guardarProducto()" >Guardar</ion-button>
+      </div>
+      
+		</ion-col>
+	</ion-row>
+</ion-grid>

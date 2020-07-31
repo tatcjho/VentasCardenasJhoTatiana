@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+  <ion-item lines="full">
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input required [(ngModel)]="producto.nombre"></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Precio</ion-label>
+    <ion-input [(ngModel)]="producto.precio"></ion-input>
+  </ion-item>
+
+  <ion-row>
+    <ion-col>
+      <ion-button type="submit" color="danger" expand="block" (click)="saveProducto()" >Guardar</ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+
+
+
+<ion-card-header>
+  <ion-card-content>
+    <ion-label position="floating">Nombre:</ion-label>
+    {{producto.nombre}}
+  </ion-card-content>
+
+<ion-card-content>
+  <ion-label position="floating">Precio:</ion-label>
+  {{producto.precio}}
+</ion-card-content>
+
+
+</ion-card>
+</ion-content>
